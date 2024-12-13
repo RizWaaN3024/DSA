@@ -10,7 +10,7 @@ public class Main {
         list.insertFirst(12);
         list.insertFirst(6);
         list.insertFirst(5);
-
+        list.insertLast(99);
         list.display();
     }
 }
