@@ -48,7 +48,6 @@ public class LinkedList {
         for (int x = 1; x < index; x++) {
             temp = temp.next;
         }
-
         Node node = new Node(val, temp.next);
         temp.next = node;
         size++;
