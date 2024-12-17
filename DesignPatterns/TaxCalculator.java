@@ -1,6 +1,6 @@
 package DesignPatterns;
 
-public class TaxCalculator {
+public interface TaxCalculator {
     // Interface
     float calculateTax();
 }
