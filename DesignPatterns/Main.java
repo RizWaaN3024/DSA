@@ -3,15 +3,19 @@ package DesignPatterns;
 public class Main {
     
     public static void main(String[] args) {
-        User user = new User("Rizwaan");
+        // User user = new User("Rizwaan");
+        // user.sayHello();
+
+        // TaxCalculator calculator = getCalculator();
+        // calculator.calculateTax();
+
         var account = new Account();
-        user.sayHello();
-
-        TaxCalculator calculator = getCalculator();
-        calculator.calculateTax();
+        account.deposit(10);
+        account.withdraw(5);
+        System.out.println(account.getBalance());
     }
 
-    public static TaxCalculator getCalculator() {
-        return new TaxCalculator2024();
-    }
+    // public static TaxCalculator getCalculator() {
+    //     return new TaxCalculator2024();
+    // }
 }

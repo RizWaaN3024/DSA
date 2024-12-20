@@ -1,3 +1,4 @@
+package DesignPatterns;
 public class Account {
     private float balance;
 
@@ -8,7 +9,7 @@ public class Account {
 
     public void withdraw(float amount) {
         if (amount > 0) {
-            balance += amount;
+            balance -= amount;
         }
     }
     // setter function
