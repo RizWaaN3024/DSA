@@ -12,9 +12,4 @@ public class Editor {
     {
         return this.content = content;
     }
-
-    public void undo() 
-    {
-        this.content = "";
-    }
 }
