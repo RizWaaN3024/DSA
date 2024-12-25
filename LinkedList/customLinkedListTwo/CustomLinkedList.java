@@ -35,4 +35,16 @@ public class CustomLinkedList<T> {
         }
         size++;
     }
+
+    // Get element at specific index
+    public T get(int index) {
+        if (index < 0 || index >= size) {
+            throw new IndexOutOfBoundsException("Index:" +index);
+        }
+        Node current = head;
+        for (int i = 0; i < index; i++) {
+            current = current.next;
+        }
+        return current.data;
+    }
 }
