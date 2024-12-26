@@ -1,18 +1,16 @@
 package LinkedList.customLinkedListTwo;
 
 public class CustomLinkedList<T> {
-
-    public class Node {
+    public class Node<T> {
         T data;
-        Node next;
+        Node<T> next;
 
-        Node(T data) {
+        public Node(T data) {
             this.data = data;
             this.next = null;
         }
     }
-
-    private Node head;
+    private Node<T> head;
     private int size;
 
     public CustomLinkedList() {
@@ -20,31 +18,20 @@ public class CustomLinkedList<T> {
         size = 0;
     }
 
-    public void add(T data) {
-        Node newNode = new Node(data);
+    // Adding an element to the end of the linkedlist (append)
+    public void append(T data) {
+        Node<T> newNode = new Node<>(data);
 
         if (head == null) {
             head = newNode;
         } else {
-            Node current = head;
-            while(current.next != null) {
+            Node<T> current = head;
+            while (current.next != null) {
                 current = current.next;
             }
-
             current.next = newNode;
         }
         size++;
     }
 
-    // Get element at specific index
-    public T get(int index) {
-        if (index < 0 || index >= size) {
-            throw new IndexOutOfBoundsException("Index:" +index);
-        }
-        Node current = head;
-        for (int i = 0; i < index; i++) {
-            current = current.next;
-        }
-        return current.data;
-    }
 }
