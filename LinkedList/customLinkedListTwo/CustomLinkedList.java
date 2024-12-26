@@ -34,4 +34,13 @@ public class CustomLinkedList<T> {
         size++;
     }
 
+    // Adding an element to the begining (prepend)
+    public void prepend(T data) {
+        Node<T> newNode = new Node<>(data);
+
+        newNode.next = head;
+        head = newNode;
+        size++;
+    }
+
 }
