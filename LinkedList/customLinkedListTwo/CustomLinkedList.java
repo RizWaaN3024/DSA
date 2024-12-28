@@ -66,4 +66,15 @@ public class CustomLinkedList<T> {
         return false;
     }
 
+    // print the list
+    public void display() {
+        Node<T> current = head;
+
+        while(current != null) {
+            System.out.print(current.data + "->");
+            current = current.next;
+        }
+        System.out.println(null);
+    }
+
 }
