@@ -34,6 +34,30 @@ public class CustomLinkedList {
         currNode.next = newNode;
     }
 
+    public void deleteFirst() {
+        if (head == null) {
+            System.out.println("List is empty");
+        }
+        head = head.next;
+    }
+    
+    public void deleteLast() {
+        if (head == null) {
+            System.out.println("List is empty");
+        }
+        if (head.next == null) {
+            head = null;
+            return;
+        }
+        Node secondLast = head;
+        Node lastNode = head.next;
+        while (lastNode.next != null) {
+            lastNode = lastNode.next;
+            secondLast = secondLast.next;
+        }
+        secondLast.next = null;
+    }
+
     public void printList() {
         if (head == null) {
             System.out.println("List is Empty");
@@ -54,6 +78,9 @@ public class CustomLinkedList {
         list.printList();
         System.out.println();
         list.addLast("Hello");
+        list.printList();
+        System.out.println();
+        list.deleteLast();
         list.printList();
     }
 }
