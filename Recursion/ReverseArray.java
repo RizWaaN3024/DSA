@@ -3,7 +3,7 @@ import java.util.*;
 
 public class ReverseArray {
     public static void reverse(int l, int r, int a[]) {
-        if (l == r) {
+        if (l >= r) {
             return;
         }
         swap(a, l, r);
