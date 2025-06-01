@@ -12,11 +12,9 @@ public class PrintSubsequencesWithSumK {
         }
         // Take part
         current.add(arr[index]);
-        sum += arr[index];
-        PrintSubsequencesWithSumEqualToK(index + 1, current, arr, sum, k);
+        PrintSubsequencesWithSumEqualToK(index + 1, current, arr, sum + arr[index], k);
 
         // Not take part
-        sum -= arr[index];
         current.remove(current.size() - 1);
         PrintSubsequencesWithSumEqualToK(index + 1, current, arr, sum, k);
     }
