@@ -12,12 +12,13 @@ public class PrintFirstSubsequenceWithSumK {
             return false;
         }
 
-        // Take Part
+        // Take part
         current.add(arr[index]);
         if (printFirstSubsequence(index + 1, current, arr, sum + arr[index], k) == true) {
             return true;
-        }
-        // not take part
+        } 
+
+        // Not take part
         current.remove(current.size() - 1);
         if (printFirstSubsequence(index + 1, current, arr, sum, k) == true) {
             return true;
