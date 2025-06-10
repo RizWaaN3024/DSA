@@ -1,9 +1,8 @@
 import java.util.*;
 
 public class InfixToPrefix {
-    
-    private static String convertInfixToPrefix(String s)
-    {
+
+    private static String convertInfixToPrefix(String s) {
         s = reverse(s);
         Stack<Character> st = new Stack<>();
         int i = 0;
@@ -44,8 +43,7 @@ public class InfixToPrefix {
         return result;
     }
 
-    private static int priority(char ch)
-    {
+    private static int priority(char ch) {
         if (ch == '^') {
             return 3;
         } else if (ch == '*' || ch == '/') {
@@ -56,8 +54,7 @@ public class InfixToPrefix {
         return -1;
     }
 
-    private static String reverse(String s)
-    {
+    private static String reverse(String s) {
         char[] arr = s.toCharArray();
 
         int left = 0;
@@ -82,13 +79,12 @@ public class InfixToPrefix {
         return new String(arr);
     }
 
-    public static void main(String[] args)
-    {
+    public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         String s = "(A+B)*C-D+F";
 
         System.out.println("The Infix expression is: " + s);
         String result = convertInfixToPrefix(s);
-        System.out.println("The Prefix Expression is: "+ result);
+        System.out.println("The Prefix Expression is: " + result);
     }
 }
