@@ -23,6 +23,7 @@ public class NearestGreaterToRight {
             }
             st.push(arr[i]);
         }
+        Collections.reverse(ds);
         return ds;
     }
 
