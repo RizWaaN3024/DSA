@@ -1,3 +1,17 @@
+/*
+ * A brute force approach would be usinf two loops where the j loop is dependent on i loop 
+ * Hence it can be optimised using a Stack data structure
+ * Iterate from the rightmost element 
+ * If the stack is empty add -1 to the result list
+ * If the st.top() is not empty and  is greater than the current arr[i] add st.top() to the list
+ * If the st.top() is not empty and it is smaller than the arr[i] then we run a while loop until our stack becomes empty or we encounter a greater element we keep popping elements from the stack
+ * If our stack gets empty we add -1 to the result list
+ * If out stack is not empty it means we have encountered a greater element hence we add it to our result list
+ * And keep pushing elements to the stack 
+ * And finally revrse the result before returning it
+ * 
+ */
+
 import java.util.*;
 
 public class NearestGreaterToRight {
