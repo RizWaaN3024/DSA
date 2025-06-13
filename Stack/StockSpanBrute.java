@@ -1,9 +1,9 @@
 import java.util.*;
 
-public class StockSpan {
+public class StockSpanBrute {
     static List<Integer> list = new ArrayList<>();
 
-    StockSpan() {
+    StockSpanBrute() {
         list = new ArrayList<>();
     }
 
