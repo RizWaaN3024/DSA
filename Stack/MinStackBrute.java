@@ -27,4 +27,32 @@ public class MinStackBrute {
     void pop() {
         st.pop();
     }
+
+    int top() {
+        return st.peek().value;
+    }
+
+    int getMin() {
+        return st.peek().minValue;
+    }
+    void display() {
+        while (!st.isEmpty()) {
+            System.out.println(st.peek());
+            st.pop();
+        }
+    }
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        MinStackBrute obj = new MinStackBrute();
+        obj.push(-2);
+        obj.push(0);
+        obj.push(-3);
+        obj.display();
+        obj.getMin();
+        obj.pop();
+        obj.top();
+        obj.getMin();
+        obj.display();
+    }
 }
