@@ -10,10 +10,22 @@ public class MaxAreaHistogram {
             this.index = index;
         }
     }
-    // public int findMaxArea(int[] arr) 
-    // {
-
-    // }
+    public static int findMaxArea(int[] arr)
+    {
+        List<Integer> right = findNearestSmallerRight(arr);
+        List<Integer> left = findNearestSmallerLeft(arr);
+        List<Integer> width = new ArrayList<>();
+        int maxArea = Integer.MIN_VALUE;
+        for (int i = 0; i < arr.length; i++) {
+            width.add(right.get(i) - left.get(i) - 1);
+        }
+        List<Integer> area = new ArrayList<>();
+        for (int i = 0; i < arr.length; i++) {
+            area.add(width.get(i) * arr[i]);
+            maxArea = Math.max(area.get(i), maxArea);
+        }
+        return maxArea;
+    }
     public static List<Integer> findNearestSmallerRight(int[] arr) {
         Stack<Pair> st = new Stack<>();
         ArrayList<Integer> list = new ArrayList<>();
@@ -32,6 +44,7 @@ public class MaxAreaHistogram {
         Collections.reverse(list);
         return list;
     }
+
     public static List<Integer> findNearestSmallerLeft(int[] arr) {
         Stack<Pair> st = new Stack<>();
         ArrayList<Integer> list = new ArrayList<>();
@@ -49,9 +62,10 @@ public class MaxAreaHistogram {
         }
         return list;
     }
+
     public static void main(String[] args) {
-        int arr[] = {6, 2, 5, 4, 5, 1, 6};
-        List<Integer> result = findNearestSmallerRight(arr);
+        int arr[] = { 6, 2, 5, 4, 5, 1, 6 };
+        int result = findMaxArea(arr);
         System.out.println(result);
     }
 }
