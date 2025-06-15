@@ -1,7 +1,7 @@
 import java.util.*;
 
 public class MaxAreaHistogram {
-    public class Pair {
+    public static class Pair {
         int value;
         int index;
 
@@ -10,11 +10,11 @@ public class MaxAreaHistogram {
             this.index = index;
         }
     }
-    public int findMaxArea(int[] arr) 
-    {
+    // public int findMaxArea(int[] arr) 
+    // {
 
-    }
-    public List<Integer> findNearestSmallerLeft(int[] arr) {
+    // }
+    public static List<Integer> findNearestSmallerLeft(int[] arr) {
         Stack<Pair> st = new Stack<>();
         ArrayList<Integer> list = new ArrayList<>();
         int psuedoIndex = -1;
@@ -23,7 +23,7 @@ public class MaxAreaHistogram {
                 st.pop();
             }
             if (st.isEmpty()) {
-                st.push(new Pair(0, psuedoIndex));
+                list.add(psuedoIndex);
             } else {
                 list.add(st.peek().index);
             }
@@ -32,7 +32,8 @@ public class MaxAreaHistogram {
         return list;
     }
     public static void main(String[] args) {
-        int arr[] = {2,1,5,6,2,3};
-        findMaxArea(arr);
+        int arr[] = {6, 2, 5, 4, 5, 1, 6};
+        List<Integer> result = findNearestSmallerLeft(arr);
+        System.out.println(result);
     }
 }
