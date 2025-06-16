@@ -2,7 +2,26 @@ import java.util.*;
 
 public class MaxAreaHistogramOptimised {
     public static int findMaxAreaOfRectangle(int[] arr) {
-        
+        int maxArea = 0;
+        Stack<Integer> st = new Stack<>();
+        for (int i = 0; i < arr.length; i++) {
+            if (st.isEmpty()) {
+                st.push(i);
+            }
+            while (st.peek() > arr[i]) {
+                int area = arr[i] * (i - st.peek() - 1);
+                maxArea = Math.max(area, maxArea);
+                st.pop();
+            }
+        }
+        if (!st.isEmpty()) {
+            while (!st.isEmpty()) {
+                int area = arr[st.peek()] * (st.peek() - arr.length - 1);
+                maxArea = Math.max(area, maxArea);
+                st.pop();
+            }
+        }
+        return maxArea;
     }
 
     public static void main(String[] args) {
