@@ -1,6 +1,6 @@
 import java.util.*;
 
-public class MaxAreaHistogramOptimised {
+public class MaxAreaHistogramOptimized {
     public static int findMaxAreaOfRectangle(int[] arr) {
         int maxArea = 0;
         Stack<Integer> st = new Stack<>();
