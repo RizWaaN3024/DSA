@@ -16,7 +16,7 @@ public class MaxAreaHistogramOptimized {
         }
         while (!st.isEmpty()) {
             int index = st.peek();
-            int nse = arr[st.peek()];
+            int nse = arr.length;
             st.pop();
             int pse = st.isEmpty() ? -1 : st.peek();
             maxArea = Math.max(maxArea, (arr[index] * (nse - pse - 1)));
