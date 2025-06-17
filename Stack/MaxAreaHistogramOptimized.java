@@ -5,19 +5,18 @@ public class MaxAreaHistogramOptimized {
         int maxArea = 0;
         Stack<Integer> st = new Stack<>();
         for (int i = 0; i < arr.length; i++) {
-            while (!st.isEmpty() && arr[st.peek()] > arr[i] ) {
+            while (!st.isEmpty() && arr[st.peek()] > arr[i]) {
                 int index = st.peek();
+                int nse = arr[i];
                 st.pop();
-                int nse = i;
                 int pse = st.isEmpty() ? -1 : st.peek();
-                int area = arr[index] * (nse - pse - 1);
-                maxArea = Math.max(maxArea, area);
+                maxArea = Math.max(maxArea, (arr[index] * (nse - pse - 1)));
             }
             st.push(i);
         }
         while (!st.isEmpty()) {
-            int nse = arr.length;
             int index = st.peek();
+            int nse = arr[st.peek()];
             st.pop();
             int pse = st.isEmpty() ? -1 : st.peek();
             maxArea = Math.max(maxArea, (arr[index] * (nse - pse - 1)));
