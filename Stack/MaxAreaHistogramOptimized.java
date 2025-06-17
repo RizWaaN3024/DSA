@@ -7,7 +7,7 @@ public class MaxAreaHistogramOptimized {
         for (int i = 0; i < arr.length; i++) {
             while (!st.isEmpty() && arr[st.peek()] > arr[i]) {
                 int index = st.peek();
-                int nse = arr[i];
+                int nse = i;
                 st.pop();
                 int pse = st.isEmpty() ? -1 : st.peek();
                 maxArea = Math.max(maxArea, (arr[index] * (nse - pse - 1)));
@@ -26,7 +26,7 @@ public class MaxAreaHistogramOptimized {
 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        int arr[] = { 6, 2, 5, 4, 5, 1, 6 };
+        int arr[] = { 2,1,5,6,2,3 };
         int result = findMaxAreaOfRectangle(arr);
         System.out.println(result);
     }
