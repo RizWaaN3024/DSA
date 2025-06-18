@@ -9,12 +9,23 @@ public class MaximalAreaApproach1 {
             arr[j] = mat[0][j];
         }
         int max = findMAH(arr);
+        for (int i = 1; i < n; i++) {
+            for (int j = 0; j < m; j++) {
+                if (mat[i][j] == 0) {
+                    arr[j] = 0;
+                } else {
+                    arr[j] = arr[j] + mat[i][j];
+                }
+            }
+            max = Math.max(max, findMAH(arr));
+        }
+        return max;
     }
     public static int findMAH(int[] arr) {
         Stack<Integer> st = new Stack<>();
         int maxArea = 0;
         for (int i = 0; i < arr.length; i++) {
-            while (!st.isEmpty() && arr[st.peek()] < arr[i]) {
+            while (!st.isEmpty() && arr[st.peek()] > arr[i]) {
                 int index = st.peek();
                 int nse = i;
                 st.pop();
