@@ -11,7 +11,26 @@ public class MaximalAreaApproach1 {
         int max = findMAH(arr);
     }
     public static int findMAH(int[] arr) {
-        
+        Stack<Integer> st = new Stack<>();
+        int maxArea = 0;
+        for (int i = 0; i < arr.length; i++) {
+            while (!st.isEmpty() && arr[st.peek()] < arr[i]) {
+                int index = st.peek();
+                int nse = i;
+                st.pop();
+                int pse = st.isEmpty() ? -1 : st.peek();
+                maxArea = Math.max(maxArea, (arr[index] * (nse - pse - 1)));
+            }
+            st.push(i);
+        }
+        while (!st.isEmpty()) {
+            int nse = arr.length;
+            int index = st.peek();
+            st.pop();
+            int pse = st.isEmpty() ? -1 : st.peek();
+            maxArea = Math.max(maxArea, (arr[index] * (nse - pse - 1)));
+        }
+        return maxArea;
     }
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
