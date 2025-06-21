@@ -34,9 +34,26 @@ public class SumOfSubarrayMinimums {
         return result;
     }
 
-    
+    public static int[] findPSE(int[] arr) {
+        Stack<Integer> st = new Stack<>();
+        int result[] = new int[arr.length];
+        for (int i = 0; i < arr.length; i++) {
+            while (!st.isEmpty() && arr[st.peek()] > arr[i]) {
+                st.pop();
+            }
+            if (st.isEmpty()) {
+                result[i] = -1;
+            } else {
+                result[i] = st.peek();
+            }
+            st.push(i);
+        }
+        return result;
+    }
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int arr[] = {3, 1, 2, 4};
+        int result = findSumOfSubarrayMinimums(arr);
+        System.out.println(result);
     }
 }
