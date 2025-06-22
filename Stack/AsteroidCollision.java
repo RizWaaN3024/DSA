@@ -8,7 +8,7 @@ public class AsteroidCollision {
             if (arr[i] > 0) {
                 list.add(arr[i]);
             } else {
-                while (!list.isEmpty() && list.get(list.size() - 1) < Math.abs(arr[i])) {
+                while (!list.isEmpty() && list.get(list.size() - 1) > 0 && list.get(list.size() - 1) < Math.abs(arr[i])) {
                     list.remove(list.size() - 1);
                 }
                 if (!list.isEmpty() && list.get(list.size() - 1) == Math.abs(arr[i])) {
