@@ -10,8 +10,8 @@ public class MaxAreaHistogram {
             this.index = index;
         }
     }
-    public static int findMaxArea(int[] arr)
-    {
+
+    public static int findMaxArea(int[] arr) {
         List<Integer> right = findNearestSmallerRight(arr);
         List<Integer> left = findNearestSmallerLeft(arr);
         List<Integer> width = new ArrayList<>();
@@ -26,6 +26,7 @@ public class MaxAreaHistogram {
         }
         return maxArea;
     }
+
     public static List<Integer> findNearestSmallerRight(int[] arr) {
         Stack<Pair> st = new Stack<>();
         ArrayList<Integer> list = new ArrayList<>();
