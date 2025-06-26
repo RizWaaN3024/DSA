@@ -15,7 +15,7 @@ public class MaximumSlidingWindow {
                 dq.removeFirst();
             }
             while (!dq.isEmpty() && arr[dq.peekLast()] <= arr[i]) {
-                dq.removeFirst();
+                dq.removeLast();
             }
             dq.addLast(i);
             if (i >= k - 1) {
