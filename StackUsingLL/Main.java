@@ -1,8 +1,7 @@
 package StackUsingLL;
 
 public class Main {
-    public static void main(String[] args)
-    {
+    public static void main(String[] args) {
         // Creating a stack
         Stack st = new Stack();
 
@@ -16,7 +15,7 @@ public class Main {
         System.out.println("Top element is " + st.peek());
 
         // removing two elemements from the top
-  		System.out.println("Removing two elements...");
+        System.out.println("Removing two elements...");
         st.pop();
         st.pop();
 
