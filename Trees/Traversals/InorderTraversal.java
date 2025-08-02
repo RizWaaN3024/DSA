@@ -1,7 +1,7 @@
 import java.util.*;
 
 public class InorderTraversal {
-    
+
     static class TreeNode {
         int data;
         TreeNode left;
