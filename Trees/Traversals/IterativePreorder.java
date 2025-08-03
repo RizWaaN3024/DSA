@@ -1,6 +1,5 @@
 import java.util.*;
 
-
 public class IterativePreorder {
 
     public static class TreeNode {
@@ -14,8 +13,8 @@ public class IterativePreorder {
             this.right = null;
         }
     }
-    
-    public static List<Integer> findPreorder (TreeNode root) {
+
+    public static List<Integer> findPreorder(TreeNode root) {
         Stack<TreeNode> st = new Stack<>();
         List<Integer> result = new ArrayList<>();
         if (root == null) {
@@ -33,5 +32,5 @@ public class IterativePreorder {
             }
         }
         return result;
-    }  
+    }
 }
