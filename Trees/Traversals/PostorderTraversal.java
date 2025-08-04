@@ -1,7 +1,7 @@
 import java.util.*;
 
 public class PostorderTraversal {
-    
+
     static class TreeNode {
         int data;
         TreeNode left;
@@ -22,6 +22,7 @@ public class PostorderTraversal {
         findPostOrder(root.right);
         System.out.print(root.data + " ");
     }
+
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         TreeNode root = new TreeNode(1);
