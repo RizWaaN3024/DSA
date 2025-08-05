@@ -6,14 +6,14 @@ public class LevelOrderTraversal {
         TreeNode left;
         TreeNode right;
 
-        public TreeNode (int data) {
+        public TreeNode(int data) {
             this.data = data;
             this.left = null;
             this.right = null;
         }
     }
 
-    public static List<List<Integer>> findLevelOrderTraversal (TreeNode root) {
+    public static List<List<Integer>> findLevelOrderTraversal(TreeNode root) {
         Queue<TreeNode> queue = new LinkedList<>();
         List<List<Integer>> list = new LinkedList<>();
         if (root == null) {

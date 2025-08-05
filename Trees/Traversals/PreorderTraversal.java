@@ -12,9 +12,8 @@ public class PreorderTraversal {
             this.right = null;
         }
     }
-    
-    public static void preorderTraversal(Node root)
-    {
+
+    public static void preorderTraversal(Node root) {
         if (root == null) {
             return;
         }
