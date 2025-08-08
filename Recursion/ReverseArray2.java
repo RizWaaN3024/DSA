@@ -1,10 +1,11 @@
 package Recursion;
+
 import java.util.*;
 
 public class ReverseArray2 {
     private static void reverse(int i, int arr[]) {
         int n = arr.length;
-        if (i >= n/2) {
+        if (i >= n / 2) {
             return;
         }
         swap(arr, i, n - i - 1);
@@ -28,9 +29,9 @@ public class ReverseArray2 {
             arr[i] = sc.nextInt();
         }
 
-        System.out.println("Original Array:"+ Arrays.toString(arr));
+        System.out.println("Original Array:" + Arrays.toString(arr));
         reverse(0, arr);
-        System.out.print("Array after reversing"+ Arrays.toString(arr));
+        System.out.print("Array after reversing" + Arrays.toString(arr));
         sc.close();
     }
 }
