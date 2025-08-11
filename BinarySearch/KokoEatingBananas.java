@@ -1,4 +1,5 @@
 package BinarySearch;
+
 import java.util.*;
 
 public class KokoEatingBananas {
@@ -20,16 +21,18 @@ public class KokoEatingBananas {
         }
         return minSpeed;
     }
+
     public static boolean canEatInTime(int[] piles, int h, int speed) {
         int hours = 0;
         for (int pile : piles) {
-            hours += Math.ceil((double)pile / speed);
+            hours += Math.ceil((double) pile / speed);
         }
         return hours <= h;
     }
+
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        int piles[] = {3,6,7,11};
+        int piles[] = { 3, 6, 7, 11 };
         int h = 8;
         int minSpeed = findMinEatingSpeed(piles, h);
         System.out.println(minSpeed);
