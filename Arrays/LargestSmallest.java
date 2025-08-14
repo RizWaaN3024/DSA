@@ -4,8 +4,7 @@ import java.util.Scanner;
 
 public class LargestSmallest {
 
-    public int findLargestNumber(int array[]) 
-    {
+    public int findLargestNumber(int array[]) {
         int max = array[0];
         for (int i = 1; i < array.length; i++) {
             if (array[i] > max) {
@@ -15,8 +14,7 @@ public class LargestSmallest {
         return max;
     }
 
-    public int findSmallestNumber(int array[])
-    {
+    public int findSmallestNumber(int array[]) {
         int min = array[0];
         for (int i = 1; i < array.length; i++) {
             if (array[i] < min) {
