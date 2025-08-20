@@ -1,4 +1,5 @@
 package Queue;
+
 import java.util.*;
 
 public class Queue {
@@ -22,8 +23,7 @@ public class Queue {
         return;
     }
 
-    static void queueDequeue()
-    {
+    static void queueDequeue() {
         if (front == rear) {
             System.out.println("Queue is Empty");
             return;
@@ -40,27 +40,25 @@ public class Queue {
         return;
     }
 
-    static void queueDisplay()
-    {
+    static void queueDisplay() {
         int i;
         if (front == rear) {
             System.out.println("Queue is Empty");
             return;
         }
         for (i = front; i < rear; i++) {
-			System.out.printf("%d ", queue[i]);
-		}
-		System.out.println();
-		return;
+            System.out.printf("%d ", queue[i]);
+        }
+        System.out.println();
+        return;
     }
 
-    static void queueFront()
-    {
+    static void queueFront() {
         if (front == rear) {
             System.out.println("Queue is Empty");
             return;
         }
-        System.out.print("Front Element is: "+queue[front]);
-		return;
+        System.out.print("Front Element is: " + queue[front]);
+        return;
     }
 }
