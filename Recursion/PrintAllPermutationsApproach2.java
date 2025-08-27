@@ -29,9 +29,10 @@ public class PrintAllPermutationsApproach2 {
         nums[index] = nums[i];
         nums[i] = temp;
     }
+
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        int nums[] = {1, 2, 3};
+        int nums[] = { 1, 2, 3 };
         List<List<Integer>> ans = printAllPermutations(nums);
         System.out.println(ans);
     }
