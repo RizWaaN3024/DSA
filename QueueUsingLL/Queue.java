@@ -31,7 +31,7 @@ public class Queue {
             return;
         }
         Node temp = front;
-        front  = front.next;
+        front = front.next;
         if (front == null) {
             rear = null;
         }
