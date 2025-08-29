@@ -23,7 +23,6 @@ public class InorderTraversal {
         System.out.print(root.data + " ");
         inorderTraversal(root.right);
     }
-
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         TreeNode root = new TreeNode(1);
