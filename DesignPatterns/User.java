@@ -1,7 +1,7 @@
 package DesignPatterns;
 
 public class User {
-    
+
     // Fields (attributes)
     public String name;
     // constructor-- method which gets called when an object is created
