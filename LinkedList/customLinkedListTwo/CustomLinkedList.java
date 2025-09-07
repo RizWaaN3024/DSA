@@ -2,6 +2,7 @@ package LinkedList.customLinkedListTwo;
 
 public class CustomLinkedList {
     Node head;
+
     class Node {
         String data;
         Node next;
@@ -11,6 +12,7 @@ public class CustomLinkedList {
             this.next = null;
         }
     }
+
     public void addFirst(String data) {
         Node newNode = new Node(data);
         if (head == null) {
@@ -40,7 +42,7 @@ public class CustomLinkedList {
         }
         head = head.next;
     }
-    
+
     public void deleteLast() {
         if (head == null) {
             System.out.println("List is empty");
@@ -70,6 +72,7 @@ public class CustomLinkedList {
         }
         System.out.print("null");
     }
+
     public static void main(String[] args) {
         CustomLinkedList list = new CustomLinkedList();
         list.addFirst("u");
